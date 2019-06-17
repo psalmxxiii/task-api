@@ -1,4 +1,4 @@
-# task-api
+# Task API
 
 Simple containerized API that manages tasks, using Flask &amp; Celery
 
