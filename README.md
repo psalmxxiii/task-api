@@ -7,5 +7,8 @@ Simple containerized API that manages tasks, using Flask &amp; Celery
 ```console
 COUNTER=7 docker-compose up --build
 ```
+*COUNTER is an optional argument to control the limit of a sample (dummy) counter function, representing a task.
 
-COUNTER is an optional argument to control the limit of the sample (dummy) counter function
+### Then head to your favorite web browser, go to ```localhost:5000``` and use it!
+
+
