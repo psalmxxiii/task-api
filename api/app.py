@@ -69,7 +69,7 @@ class Task(Resource):
 
     def post(self):
         '''Creates a new task at the current date/time'''
-        sum.apply_async([counter_until])
+        count.apply_async([counter_until])
         response = jsonify({'status': 'Your task is been processed.'})
         return response
 
@@ -102,7 +102,7 @@ class ScheduledTask(Resource):
     def post(self, run_at):
         '''Schedules a task to a specified date/time'''
         due_date = get_datetime(run_at, tz)
-        sum.apply_async([counter_until], eta=localtime.localize(due_date))
+        count.apply_async([counter_until], eta=localtime.localize(due_date))
         response = jsonify(
             {'status': f'Your task is scheduled to be processed at {due_date.strftime("%Y-%m-%d %H:%M:%S")}'})
         response.status_code = 202
